@@ -102,6 +102,9 @@
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
   .chips span{border:1px solid var(--line2);border-radius:999px;padding:5px 12px;font-size:13.5px;color:var(--muted)}
   .works-in{margin-top:36px;text-align:center}
+  .works-in{display:grid;justify-content:center}
+  .wrow{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px;margin:0 0 10px}
+  .wl{font-size:13px;font-weight:650;color:var(--faint);margin-right:6px;min-width:92px;text-align:right}
   .works-in p{color:var(--faint);font-size:13.5px;margin:0 0 14px}
   @media (max-width:900px){.showcase,.grid2{grid-template-columns:1fr;gap:28px}}
   /* the app's three points */
@@ -306,12 +309,8 @@
       </div>
     </div>
     <div class="works-in">
-      <p>Works on any call on your Mac, with files from your Mac and Google</p>
-    <div class="pills">
-      <span class="pill">Zoom</span><span class="pill">Google Meet</span><span class="pill">Microsoft Teams</span>
-      <span class="pill">Slack</span><span class="pill">Webex</span><span class="pill">FaceTime</span>
-      <span class="pill g">Google Drive</span><span class="pill g">Google Calendar</span><span class="pill g">PDF · Slides · Docs · Sheets</span>
-    </div>
+      <div class="wrow"><span class="wl">Meetings on</span><span class="pill">Zoom</span><span class="pill">Google Meet</span><span class="pill">Teams</span><span class="pill">Slack</span><span class="pill">Webex</span></div>
+      <div class="wrow"><span class="wl">Sources</span><span class="pill g">Mac files</span><span class="pill g">Google Drive</span><span class="pill g">Google Calendar</span></div>
     </div>
     <div class="detail">
       <div><img src="img/answer.png" alt="A MeetGlance answer: headline, supporting points, the source file q3-metrics.xlsx and suggested follow-up questions" /></div>
