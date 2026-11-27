@@ -106,7 +106,10 @@
   .wrow{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px;margin:0 0 10px}
   .wl{font-size:13px;font-weight:650;color:var(--faint);margin-right:6px;min-width:92px;text-align:right}
   .works-in p{color:var(--faint);font-size:13.5px;margin:0 0 14px}
-  @media (max-width:900px){.showcase,.grid2{grid-template-columns:1fr;gap:28px}}
+  @media (max-width:900px){.keys{grid-template-columns:1fr 1fr}.showcase,.grid2{grid-template-columns:1fr;gap:28px}}
+  .keys{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-20px 0 28px}
+  .keys span{display:inline-flex;align-items:center;gap:7px;background:#eaf7ef;color:#1f7a45;font-weight:620;font-size:15px;padding:13px 16px;border-radius:12px}
+  .keys svg{width:15px;height:15px}
   /* the app's three points */
   .three{padding:28px 0 8px}
   .pt{display:flex;gap:14px;align-items:flex-start;text-align:left}
@@ -331,8 +334,8 @@
     <div class="sec-head">
       <span class="eyebrow">Private by design</span>
       <h2>Your call stays a call.</h2>
-      <p class="lead">Never recorded. Only what&rsquo;s needed for an answer leaves your Mac.</p>
     </div>
+    <div class="keys"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Transcribed on your Mac</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Never recorded</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Nothing stored</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Encrypted in transit</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Hidden from screen share</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17 19 7"/></svg>Never used to train AI</span></div>
     <div class="flow">
       <div><div class="k">01</div><h3>Your Mac listens</h3><p>Audio is transcribed locally, never uploaded.</p></div>
       <div><div class="k">02</div><h3>A question is heard</h3><p>Only the question and a few relevant passages are sent, encrypted.</p></div>
