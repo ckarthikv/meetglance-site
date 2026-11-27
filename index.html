@@ -104,13 +104,16 @@
   .works-in{margin-top:36px;text-align:center}
   .works-in{display:grid;justify-content:center}
   .wrow{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px;margin:0 0 10px}
-  .wl{font-size:13px;font-weight:650;color:var(--faint);margin-right:6px;min-width:92px;text-align:right}
+  .wl{font-size:13px;font-weight:650;color:var(--faint);margin-right:6px;min-width:128px;text-align:right}
   .works-in p{color:var(--faint);font-size:13.5px;margin:0 0 14px}
   @media (max-width:900px){.showcase,.grid2{grid-template-columns:1fr;gap:28px}}
   .keys{display:flex;flex-wrap:wrap;gap:8px;margin:-20px 0 28px}
   .keys span{display:inline-flex;align-items:center;gap:7px;background:#eaf7ef;color:#1f7a45;font-weight:620;font-size:14px;padding:7px 13px;border-radius:999px}
   .keys svg{width:15px;height:15px}
-  .dh{color:#fff;font-size:22px;font-weight:680;margin:0 0 22px}
+  .dh{grid-column:1/-1;color:#fff;font-size:26px;font-weight:700;letter-spacing:-.02em;margin:0 0 -8px}
+  .start{display:inline-block;margin-left:8px;font-size:11.5px;font-weight:700;letter-spacing:.04em;background:#eaf7ef;color:#1f7a45;padding:3px 9px;border-radius:999px;vertical-align:middle}
+  .later{margin:0;text-align:center;color:var(--faint);font-size:14px;padding:13px 0}
+  section,header{scroll-margin-top:70px}
   /* the app's three points */
   .three{padding:28px 0 8px}
   .pt{display:flex;gap:14px;align-items:flex-start;text-align:left}
@@ -314,18 +317,17 @@
     </div>
     <div class="works-in">
       <div class="wrow"><span class="wl">Meetings on</span><span class="pill">Zoom</span><span class="pill">Google Meet</span><span class="pill">Teams</span><span class="pill">Slack</span><span class="pill">Webex</span></div>
-      <div class="wrow"><span class="wl">Sources</span><span class="pill g">Mac files</span><span class="pill g">Google Drive</span><span class="pill g">Google Calendar</span></div>
+      <div class="wrow"><span class="wl">Knowledge sources</span><span class="pill g">Mac files</span><span class="pill g">Google Drive</span><span class="pill g">Google Calendar</span></div>
     </div>
     <div class="detail">
+      <h3 class="dh">What a live answer looks like</h3>
       <div><img src="img/answer.png" alt="A MeetGlance answer: headline, supporting points, the source file q3-metrics.xlsx and suggested follow-up questions" /></div>
       <div>
-      <h3 class="dh">What a live answer looks like</h3>
       <ul class="checks">
         <li><b>Headline first</b><span>One line to read at a glance.</span></li>
         <li><b>Always shows its source</b><span>Every answer names its file.</span></li>
         <li><b>Follow-ups ready</b><span>One click, or type your own.</span></li>
-        <li><b>Never makes things up</b><span>If it&rsquo;s not in your files, it says so.</span>
-          <img class="nis" src="img/not-in-sources.png" alt="MeetGlance showing 'Not in your sources' for a question about SOC 2 certification" /></li>
+        <li><b>Never makes things up</b><span>If it&rsquo;s not in your files, it says so.</span></li>
       </ul>
       </div>
     </div>
@@ -373,12 +375,12 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Pricing</span>
-      <h2>Try it free. Keep it for $20 a month.</h2>
-      <p class="lead">The AI is included, so there&rsquo;s no API key to set up. Minutes only count while MeetGlance is listening.</p>
+      <h2>Try it free.</h2>
+      <p class="lead">100 free minutes to start. Minutes only count while MeetGlance is listening.</p>
     </div>
     <div class="plans">
-      <div class="plan">
-        <div class="name">Free</div>
+      <div class="plan pro">
+        <div class="name">Free <span class="start">Start here</span></div>
         <div class="price">$0</div>
         <div class="name" style="font-weight:500">to start</div>
         <ul>
@@ -386,9 +388,9 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5 10 17 19 7"/></svg>Every feature included</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5 10 17 19 7"/></svg>No card needed</li>
         </ul>
-        <a class="btn ghost" href="https://github.com/ckarthikv/meetglance-site/releases/latest/download/MeetGlance.dmg">Download for Mac</a>
+        <a class="btn" href="https://github.com/ckarthikv/meetglance-site/releases/latest/download/MeetGlance.dmg">Download free for Mac</a>
       </div>
-      <div class="plan pro">
+      <div class="plan">
         <div class="name">Unlimited</div>
         <div class="price">$20<small> / month</small></div>
         <div class="name" style="font-weight:500">after your free minutes</div>
@@ -397,7 +399,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5 10 17 19 7"/></svg>AI answers included</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5 10 17 19 7"/></svg>Cancel anytime</li>
         </ul>
-        <a class="btn" href="https://github.com/ckarthikv/meetglance-site/releases/latest/download/MeetGlance.dmg">Start free, upgrade in the app</a>
+        <p class="later">Upgrade anytime in the app.</p>
       </div>
     </div>
   </div>
@@ -405,7 +407,7 @@
 
 <section id="faq" style="padding-top:24px">
   <div class="wrap">
-    <div class="sec-head center" style="margin-left:auto;margin-right:auto"><h2>Questions, answered</h2></div>
+    <div class="sec-head center" style="margin-left:auto;margin-right:auto"><h2>FAQ</h2></div>
     <div class="faq">
       <details open>
         <summary>Does MeetGlance record my calls?</summary>
