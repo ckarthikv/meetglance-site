@@ -148,8 +148,8 @@
 
   /* privacy */
   .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}
-  .flow div{padding:26px 24px;border-right:1px solid var(--line)}
-  .flow div:last-child{border-right:0}
+  .flow>div{padding:26px 24px;border-right:1px solid var(--line)}
+  .flow>div:last-child{border-right:0}
   .flow .k{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
   .flow h3{font-size:17px;margin:8px 0 6px}
   .flow p{margin:0;color:var(--muted);font-size:14.5px}
@@ -194,8 +194,8 @@
     section{padding:72px 0}
     .grid3,.grid4,.facts,.google,.plans{grid-template-columns:1fr}
     .flow{grid-template-columns:1fr 1fr}
-    .flow div:nth-child(2){border-right:0}
-    .flow div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .flow>div:nth-child(2){border-right:0}
+    .flow>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
     .product,.honest{grid-template-columns:1fr;gap:32px}
     .product{padding:40px 24px}
     .nav-links a:not(.btn){display:none}
@@ -204,7 +204,7 @@
   @media (max-width:560px){
     .wrap{padding:0 16px}
     .flow{grid-template-columns:1fr}
-    .flow div{border-right:0;border-bottom:1px solid var(--line)}
+    .flow>div{border-right:0;border-bottom:1px solid var(--line)}
     .panel{width:92%}
     .menubar .l span:nth-child(n+3),.menubar .r span:nth-child(n+2){display:none}
     .foot a{margin:0 16px 0 0}
@@ -287,23 +287,23 @@
     <div class="sec-head">
       <span class="eyebrow">How it works</span>
       <h2>From question to answer in seconds.</h2>
-      <p class="lead">No bot joins your call and nothing to install in your meeting app. MeetGlance sits in your Mac&rsquo;s notch, out of the way until a question comes up.</p>
+      <p class="lead">No bot joins your call. MeetGlance waits quietly in your notch.</p>
     </div>
     <div class="grid3 steps">
       <div class="card step">
         <div class="n">STEP 1</div>
         <h3>Add your files</h3>
-        <p>PDFs, decks, docs and spreadsheets from your Mac or Google Drive. Or let MeetGlance add the files attached to your next calendar meeting.</p>
+        <p>Decks, docs and sheets from your Mac, Drive or calendar invite.</p>
       </div>
       <div class="card step">
         <div class="n">STEP 2</div>
         <h3>Start listening</h3>
-        <p>Press Start when the call begins. MeetGlance transcribes on your Mac and listens for questions asked to you.</p>
+        <p>Press Start when the call begins.</p>
       </div>
       <div class="card step">
         <div class="n">STEP 3</div>
         <h3>Glance and answer</h3>
-        <p>The answer appears below your camera with the file it came from. Ask a follow-up in the box if you need more.</p>
+        <p>The answer appears under your camera, with its source.</p>
       </div>
     </div>
     <div class="works-in">
@@ -317,10 +317,10 @@
     <div class="detail">
       <div><img src="img/answer.png" alt="A MeetGlance answer: headline, supporting points, the source file q3-metrics.xlsx and suggested follow-up questions" /></div>
       <ul class="checks">
-        <li><b>Headline first</b><span>The answer in one line, with the detail underneath. Readable at a glance.</span></li>
-        <li><b>Always shows its source</b><span>Every answer names the file it came from, so you know you can trust it.</span></li>
-        <li><b>Follow-ups ready</b><span>Likely next questions are one click away, or type your own.</span></li>
-        <li><b>Never makes things up</b><span>If the answer isn&rsquo;t in your files, it says so instead of guessing.</span>
+        <li><b>Headline first</b><span>One line to read at a glance.</span></li>
+        <li><b>Always shows its source</b><span>Every answer names its file.</span></li>
+        <li><b>Follow-ups ready</b><span>One click, or type your own.</span></li>
+        <li><b>Never makes things up</b><span>If it&rsquo;s not in your files, it says so.</span>
           <img class="nis" src="img/not-in-sources.png" alt="MeetGlance showing 'Not in your sources' for a question about SOC 2 certification" /></li>
       </ul>
     </div>
@@ -333,39 +333,31 @@
     <div class="sec-head">
       <span class="eyebrow">Private by design</span>
       <h2>Your call stays a call.</h2>
-      <p class="lead">MeetGlance never records. Audio is turned into text on your Mac, and only what&rsquo;s needed for an answer ever leaves it.</p>
+      <p class="lead">Never recorded. Only what&rsquo;s needed for an answer leaves your Mac.</p>
     </div>
     <div class="flow">
-      <div><div class="k">01 · ON YOUR MAC</div><h3>Your Mac listens</h3><p>Call audio is transcribed on your Mac. It&rsquo;s never recorded and never uploaded.</p></div>
-      <div><div class="k">02 · ONLY WHAT&rsquo;S NEEDED</div><h3>A question is heard</h3><p>The question, a few recent lines and the relevant passages from your files are sent over an encrypted connection.</p></div>
-      <div><div class="k">03 · PASSED THROUGH</div><h3>An answer comes back</h3><p>Our server passes the request to Anthropic&rsquo;s Claude and returns the answer. Nothing is stored or logged.</p></div>
-      <div><div class="k">04 · GONE</div><h3>Nothing stays behind</h3><p>The transcript lives in memory and is discarded when you stop listening.</p></div>
-    </div>
-    <div class="facts">
-      <div class="fact"><span>Call audio</span><b>Never leaves your Mac</b></div>
-      <div class="fact"><span>Transcripts</span><b>Never stored</b></div>
-      <div class="fact"><span>Your files</span><b>Indexed on your Mac</b></div>
-      <div class="fact"><span>Training on your data</span><b>Never</b></div>
-      <div class="fact"><span>AI model</span><b>Anthropic Claude</b></div>
-      <div class="fact"><span>Screen sharing</span><b>Panel hidden</b></div>
+      <div><div class="k">01 · ON YOUR MAC</div><h3>Your Mac listens</h3><p>Audio is transcribed locally, never uploaded.</p></div>
+      <div><div class="k">02 · ONLY WHAT&rsquo;S NEEDED</div><h3>A question is heard</h3><p>Only the question and a few relevant passages are sent, encrypted.</p></div>
+      <div><div class="k">03 · NOT STORED</div><h3>An answer comes back</h3><p>Claude writes it. Nothing is stored or logged.</p></div>
+      <div><div class="k">04 · GONE</div><h3>Nothing stays behind</h3><p>The transcript is cleared when you stop.</p></div>
     </div>
     <div class="google">
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
         <h3>Works with Google Drive and Calendar</h3>
-        <p>Each Google permission is asked for only when you use the feature that needs it.</p>
+        <p>Each permission is asked for only when needed.</p>
         <ul>
-          <li><b>Sign in</b> shares only your email address.</li>
-          <li><b>Drive</b> (<code>drive.file</code>) opens only the files you pick. It can&rsquo;t see the rest of your Drive.</li>
-          <li><b>Calendar</b> (read-only) finds your next meeting and the files attached to it.</li>
+          <li><b>Sign in:</b> your email only.</li>
+          <li><b>Drive:</b> only the files you pick.</li>
+          <li><b>Calendar:</b> read-only, to find your next meeting&rsquo;s files.</li>
         </ul>
         <p style="margin-top:12px"><a href="privacy.html#google">How we handle Google data</a></p>
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M3 3l18 18"/></svg></div>
         <h3>Out of the screen share</h3>
-        <p>The panel is excluded from screen recording and sharing, so people on the call see your slides, never your answers. A built-in check lets you confirm it before a call.</p>
-        <p style="margin-top:10px;font-size:14px;color:var(--faint)">No app can promise this on every macOS version and every way of sharing. Sharing a single window is the safest.</p>
+        <p>Others see your slides, never your answers. A built-in check confirms it.</p>
+        <p style="margin-top:8px;font-size:13.5px;color:var(--faint)">Sharing a single window is safest.</p>
       </div>
     </div>
   </div>
